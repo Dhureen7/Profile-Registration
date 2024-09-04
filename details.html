@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CITL</title>
+    <link rel="stylesheet" href="main.css">
+    
+</head>
+<body>
+    <div class="container">
+
+        <div class="left-half">
+            <img src="resources/left-half-actual.webp" style="height: 100%;" alt="Abstract Illustration">
+        </div>
+
+        <div class="right-half">
+            <h1 style="color: rgb(0, 128, 255);">Welcome to ProfileRender</h1>
+
+            <form id="uploadForm" onsubmit="display(event)">
+
+                <div style="display: flex; flex-wrap: no-wrap; gap: 20px;">
+                    <div style="flex: 1;">
+                        <label for="fullname">Enter your full name </label>
+                        <input type="text" id="fullname" name="fullname" required>    
+                    </div>
+                    <div style="flex: 1;">
+                        <label for="email">Email </label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                </div>
+            
+                <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+                    <div style="flex: 1;">
+                        <label for="city">City </label>
+                        <input type="text" id="city" name="city" required>
+                    </div>
+                    <div style="flex: 1;">
+                        <label for="country">Country </label>
+                        <input type="text" id="country" name="country" required>
+                    </div>
+                </div>
+                
+                <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+                    <div style="flex: 1;">
+                        <label for="collegename">College Name </label>
+                        <input type="text" id="collegename" name="collegename" required>
+                    </div>
+                    <div style="flex: 1;">
+                        <label for="cgpa">CGPA </label>
+                        <input type="number" id="cgpa" name="cgpa" step="0.01" min="4" max="10" required>
+                    </div>
+                </div>
+            
+                <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+                    <div style="flex: 1;">
+                        <label for="cet">CET Score </label>
+                        <input type="number" id="cet" name="cet" step="0.01" min="0" max="100" required>
+                    </div>
+                    <div style="flex: 1;">
+                        <label for="skills">List Your Skills</label>
+                        <input type="text" id="skills" name="skills" required placeholder="e.g., Java, Python, HTML">
+                    </div>
+                </div>
+            
+                <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+                    <div style="flex: 1;">
+                        <label for="jrcollege">Jr College Name </label>
+                        <input type="text" id="jrcollege" name="jrcollege" required>
+                    </div>
+                    <div style="flex: 1;">
+                        <label for="12th">12th Marks </label>
+                        <input type="number" id="12th" name="12th" step="0.1" min="35" max="100" required>
+                    </div>
+                </div>
+
+                <label for="profilepic">Upload Profile Picture </label>
+                <input type="file" id="profilepic" name="profilepic" accept="image/*" required>
+                <br>
+
+                <div style="text-align: center; margin-top: 20px;">
+                    <button id="submitbutton" type="submit">Visualize Profile</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="details.js"></script>
+</body>
+</html>
